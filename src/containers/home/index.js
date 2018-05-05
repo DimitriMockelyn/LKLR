@@ -10,26 +10,137 @@ import {
 } from "../../modules/counter";
 
 import Box from "../../components/box";
+import { green } from "../../components/colors";
+const margeIcones = "30";
 
 const Home = props => (
   <div>
     <Box
-      texte="Coucou "
-      gauche={1}
-      imageEntiere={1}
-      couleurFond="orange"
-      enLigne={1}
-    />
-    <Box
-      enLigne={1} /* 1 ou 0*/
+      enLigne={0} /* 1 ou 0*/
       couleurFond="rgb(255,124,8)" /* code RGB */
+      image="bandeau_header_accueil.png"
       imageEntiere={0}
       imageGauche={1}
       imageHaut={1}
       hauteur={500}
     >
-      <Box gauche={1} droite={1} haut={1} bas={1} texte="Coucou coucou :)" />
-      <Box>coucou</Box>
+      <Box enLigne={1} hauteur={400}>
+        <Box
+          largeurMax={1}
+          image="Guillemets_ouvertes.png"
+          imageHaut={1}
+          imageDroite={1}
+          hauteur={250}
+        />
+        <Box
+          largeurMax={1}
+          texte="Découvrez et soutenez les projets proches de chez vous grâce aux bornes tactiles LOKALÉRO"
+          hauteur="250"
+          couleur="white"
+          complementStyle={{
+            "font-size": "40px",
+            "text-align": "center"
+          }}
+        />
+        <Box
+          largeurMax={1}
+          image="Guillemets_fermees.png"
+          imageBas={1}
+          imageGauche={1}
+          hauteur="250"
+        />
+      </Box>
+      <Box enLigne={1}>
+        <Box
+          type="bouton"
+          texte="Le principe"
+          couleur="black"
+          bordureArrondi="5"
+          padding="10px 20"
+          couleurFond={green}
+        />
+      </Box>
+    </Box>
+    <Box
+      largeurMax={1}
+      texte="Je suis un(e)..."
+      couleur={green}
+      complementStyle={{
+        "font-size": "30px",
+        "text-align": "center"
+      }}
+    />
+    <Box enLigne={1} couleurFond={green}>
+      <Box
+        couleurFond="#FFFFFF88"
+        largeur={160}
+        hauteur={160}
+        margeGauche={margeIcones}
+        margeDroite={margeIcones}
+      >
+        <Box image="Citoyen.png" hauteur={100} largeur={100} imageEntiere={1} />
+        <Box texte="Lokal citoyen(ne)" padding="5" />
+      </Box>
+      <Box
+        couleurFond="#FFFFFF88"
+        largeur={160}
+        hauteur={160}
+        margeGauche={margeIcones}
+        margeDroite={margeIcones}
+      >
+        <Box
+          image="Association.png"
+          hauteur={100}
+          largeur={100}
+          imageEntiere={1}
+        />
+        <Box texte="Lokal association" padding="5" />
+      </Box>
+      <Box
+        couleurFond="#FFFFFF88"
+        largeur={160}
+        hauteur={160}
+        margeGauche={margeIcones}
+        margeDroite={margeIcones}
+      >
+        <Box
+          image="Professionnel.png"
+          hauteur={100}
+          largeur={100}
+          imageEntiere={1}
+        />
+        <Box texte="Lokal professionel(le)" padding="5" />
+      </Box>
+      <Box
+        couleurFond="#FFFFFF88"
+        largeur={160}
+        hauteur={160}
+        margeGauche={margeIcones}
+        margeDroite={margeIcones}
+      >
+        <Box
+          image="Collectivité.png"
+          hauteur={100}
+          largeur={100}
+          imageEntiere={1}
+        />
+        <Box texte="Lokal collectivité" padding="5" />
+      </Box>
+      <Box
+        couleurFond="#FFFFFF88"
+        largeur={160}
+        hauteur={160}
+        margeGauche={margeIcones}
+        margeDroite={margeIcones}
+      >
+        <Box
+          image="Plateforme_crowdfunding.png"
+          hauteur={100}
+          largeur={100}
+          imageEntiere={1}
+        />
+        <Box texte="Plateforme de crowdfunding" padding="5" />
+      </Box>
     </Box>
   </div>
 );
