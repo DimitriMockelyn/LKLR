@@ -22,7 +22,7 @@ export default class Header extends React.Component {
     >
       <Box enLigne={1} gauche={1}>
         <Box
-          type='bouton'
+          type='bouton-maj'
           image='buger_accueil.png' 
           imageEntiere={1}
           imageGauche={1}
@@ -31,7 +31,7 @@ export default class Header extends React.Component {
           padding='10'
         />
         <Box 
-          type='bouton'
+          type='bouton-maj'
           image='logo.png'
           marge='0'
           padding='37'
@@ -42,22 +42,22 @@ export default class Header extends React.Component {
 
       <Box enLigne={1} droite={1}>
         <Box 
-          type='bouton'
+          type='bouton-maj'
           couleur={orangee}
           texte='La borne Lokaléro'
         />
         <Box 
-          type='bouton'
+          type='bouton-maj'
           couleur={orangee}
           texte='Les projets'
         />
         <Box
-          type='bouton'
+          type='bouton-maj'
           couleur={orangee} 
           texte="L'équipe"
         />
         <Box 
-          type='bouton'
+          type='bouton-maj'
           couleur={vert}
           bordure={'2px solid '+vert}
           bordureArrondi='5'

@@ -3,14 +3,23 @@ import { Route, Link } from "react-router-dom";
 import Home from "../home";
 import About from "../about";
 import Header from "../header";
+import { Provider } from "react-alert";
+import AlertTemplate from "./alert-template";
+
+const options = {
+  timeout: 5000,
+  position: "bottom center"
+};
+
+console.log(AlertTemplate);
 const App = () => (
-  <div>
+  <Provider template={AlertTemplate} {...options}>
     <Header />
     <main style={{ "margin-top": "75px" }}>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
     </main>
-  </div>
+  </Provider>
 );
 
 export default App;

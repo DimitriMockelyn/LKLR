@@ -52,7 +52,7 @@ const Home = props => (
       </Box>
       <Box enLigne={1}>
         <Box
-          type="bouton"
+          type="bouton-maj"
           texte="Le principe"
           couleur="black"
           bordureArrondi="5"
@@ -77,6 +77,7 @@ const Home = props => (
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
+        type="bouton"
       >
         <Box image="Citoyen.png" hauteur={100} largeur={100} imageEntiere={1} />
         <Box texte="Lokal citoyen(ne)" padding="5" />
@@ -87,6 +88,7 @@ const Home = props => (
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
+        type="bouton"
       >
         <Box
           image="Association.png"
@@ -102,6 +104,7 @@ const Home = props => (
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
+        type="bouton"
       >
         <Box
           image="Professionnel.png"
@@ -117,6 +120,7 @@ const Home = props => (
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
+        type="bouton"
       >
         <Box
           image="Collectivité.png"
@@ -132,6 +136,7 @@ const Home = props => (
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
+        type="bouton"
       >
         <Box
           image="Plateforme_crowdfunding.png"
@@ -142,6 +147,14 @@ const Home = props => (
         <Box texte="Plateforme de crowdfunding" padding="5" />
       </Box>
     </Box>
+    <Box
+      largeurMax={1}
+      texte="UNE EXPÉRIENCE DE DON INNOVANTE"
+      couleur={"deepblue"}
+      complementStyle={{
+        "font-size": "30px"
+      }}
+    />
   </div>
 );
 

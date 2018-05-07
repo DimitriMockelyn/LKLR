@@ -1,6 +1,9 @@
 import React from 'react';
+import { Alert } from 'react-alert';
 
-export default class Box extends React.Component {
+import { withAlert } from 'react-alert';
+
+class Box extends React.Component {
   displayName= 'Generic Box';
   getInitialState() {
     return {}
@@ -84,9 +87,12 @@ export default class Box extends React.Component {
       style['margin-right'] = this.props.margeDroite + 'px';
     }
     if (this.props.type) {
-      if (this.props.type ==='bouton'){
+      if (this.props.type ==='bouton-maj'){
         style['cursor'] = 'pointer';
         style['text-transform'] = 'uppercase';
+      }
+      if (this.props.type ==='bouton'){
+        style['cursor'] = 'pointer';
       }
     }
 
@@ -104,12 +110,28 @@ export default class Box extends React.Component {
     }
     return style;
   }
+  computeOnClick() {
+    let handler = undefined;
+    if (this.props.type) {
+      if (this.props.type ==='bouton-maj' || this.props.type ==='bouton'){
+          handler = this.props.action;
+          if (!handler) {
+              handler = () => {
+                this.props.alert.show(<div style={{ 'text-transform': 'initial', 'width': '100%' }}>Le site est en cours de développement, et cette fonctionnalité n\'est pas encore disponible :( Vous pouvez nous laissez vos coordonnées pour etre tenu au courant des évolutions, dans la rubrique "Nous contacter"</div>)
+              }
+          }
+      }
+    }
+    return handler;
+  }
   render() {
     const style = this.computeStyle();
-    return <div style={style}>
+    const onClick = this.computeOnClick();
+    return <div style={style} onClick={onClick} >
       {this.props.texte}
       {this.props.children}
     </div>
   }
 };
 
+export default withAlert(Box)
