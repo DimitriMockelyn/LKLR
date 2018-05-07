@@ -3,6 +3,7 @@ import { Route, Link } from "react-router-dom";
 import Home from "../home";
 import About from "../about";
 import Header from "../header";
+import Footer from "../footer/index";
 import { Provider } from "react-alert";
 import AlertTemplate from "./alert-template";
 
@@ -18,6 +19,7 @@ const App = () => (
     <main style={{ "margin-top": "75px" }}>
       <Route exact path="/" component={Home} />
       <Route exact path="/about-us" component={About} />
+      <Footer />
     </main>
   </Provider>
 );

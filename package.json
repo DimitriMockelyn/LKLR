@@ -30,8 +30,5 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
-  "homepage": "https://cra-redux-router-thunk.herokuapp.com",
-  "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
-  }
+  "homepage": "https://cra-redux-router-thunk.herokuapp.com"
 }

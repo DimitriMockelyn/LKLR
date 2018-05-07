@@ -11,7 +11,7 @@ import {
 
 import Box from "../../components/box";
 import { green, orange } from "../../components/colors";
-const margeIcones = "30";
+const margeIcones = "30";  
 
 const Home = props => (
   <div>
@@ -24,7 +24,7 @@ const Home = props => (
       imageHaut={1}
       hauteur={500}
     >
-      <Box enLigne={1} hauteur={400}>
+      <Box enLigne={1} hauteur={400}> 
         <Box
           largeurMax={1}
           image="Guillemets_ouvertes.png"
@@ -72,7 +72,7 @@ const Home = props => (
     />
     <Box enLigne={1} couleurFond={green}>
       <Box
-        couleurFond="#FFFFFF88"
+        couleurFond="rgba(255,255,255,0.5)"
         largeur={160}
         hauteur={160}
         margeGauche={margeIcones}
@@ -83,7 +83,7 @@ const Home = props => (
         <Box texte="Lokal citoyen(ne)" padding="5" />
       </Box>
       <Box
-        couleurFond="#FFFFFF88"
+        couleurFond="rgba(255,255,255,0.5)"
         largeur={160}
         hauteur={160}
         margeGauche={margeIcones}
@@ -99,7 +99,7 @@ const Home = props => (
         <Box texte="Lokal association" padding="5" />
       </Box>
       <Box
-        couleurFond="#FFFFFF88"
+        couleurFond="rgba(255,255,255,0.5)"
         largeur={160}
         hauteur={160}
         margeGauche={margeIcones}
@@ -113,14 +113,14 @@ const Home = props => (
           imageEntiere={1}
         />
         <Box texte="Lokal professionel(le)" padding="5" />
-      </Box>
+      </Box> 
       <Box
-        couleurFond="#FFFFFF88"
+        couleurFond="rgba(255,255,255,0.5)"
         largeur={160}
         hauteur={160}
         margeGauche={margeIcones}
         margeDroite={margeIcones}
-        type="bouton"
+        type="bouton" 
       >
         <Box
           image="Collectivité.png"
@@ -131,7 +131,7 @@ const Home = props => (
         <Box texte="Lokal collectivité" padding="5" />
       </Box>
       <Box
-        couleurFond="#FFFFFF88"
+        couleurFond="rgba(255,255,255,0.5)"
         largeur={160}
         hauteur={160}
         margeGauche={margeIcones}
@@ -144,7 +144,7 @@ const Home = props => (
           largeur={100}
           imageEntiere={1}
         />
-        <Box texte="Plateforme de crowdfunding" padding="5" />
+        <Box texte="Plateforme de crowdfunding" padding="5" largeurMax={1} />
       </Box>
     </Box>
     <Box
@@ -184,7 +184,7 @@ const Home = props => (
         margeDroite="30"
         texte="Les bornes plus en détail"
       />
-    </Box>
+    </Box> 
     <Box couleurFond={orange} largeurMax={1} padding={40}>
       <Box enLigne={1}>
         <Box
@@ -210,7 +210,7 @@ const Home = props => (
           }}
           type="bouton"
           hauteur={50}
-          padding="20px 50"
+          padding="10px 50"
         />
         <Box
           largeurMax={1}
@@ -248,7 +248,7 @@ const Home = props => (
           }}
           type="bouton"
           hauteur={50}
-          padding="20px 50"
+          padding="10px 50"
         />
         <Box
           largeurMax={1}
@@ -308,6 +308,7 @@ const Home = props => (
               texte="Les collectivités territoriales"
               couleur="#0f5d7b"
               padding="5"
+              largeurMax={1}
               complementStyle={{
                 "text-transform": "uppercase"
               }}
@@ -365,6 +366,7 @@ const Home = props => (
             />
             <Box
               texte="Les associations du quartier"
+              largeurMax={1}
               couleur="#0f5d7b"
               padding="5"
               complementStyle={{
@@ -425,12 +427,49 @@ const Home = props => (
             />
             <Box
               texte="Les plateformes de crowdfunding"
+              largeurMax={1}
               couleur="#0f5d7b"
               padding="5"
               complementStyle={{
                 "text-transform": "uppercase"
               }}
             />
+            <Box
+              image="Flèche_plateforme _pro.png"
+              imageEntiere={1}
+              padding={20}
+              complementStyle={{
+                position: "relative",
+                left: "-60px"
+              }}
+            />
+            <Box margeGauche="140" margeHaut={-30} padding="5" gauche={1}>
+              <Box
+                couleur="white"
+                texte="Démocratisation du financement participatif"
+                padding="0"
+                complementStyle={{
+                  "text-align": "left"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Amélioration du taux de succès"
+                padding="0"
+                complementStyle={{
+                  "white-space": "pre"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Renforcement de la marque"
+                padding="0"
+                complementStyle={{
+                  "text-align": "left",
+                  "white-space": "pre"
+                }}
+              />
+            </Box>
           </Box>
         </Box>
         <Box
@@ -456,12 +495,48 @@ const Home = props => (
             />
             <Box
               texte="Professionel ou commerçant"
+              largeurMax={1}
               couleur="#0f5d7b"
               padding="5"
               complementStyle={{
                 "text-transform": "uppercase"
               }}
             />
+            <Box
+              image="Flèche_plateforme _pro.png"
+              imageEntiere={1}
+              padding={20}
+              complementStyle={{
+                position: "relative",
+                left: "-60px"
+              }}
+            />
+            <Box margeGauche="140" margeHaut={-30} padding="5" gauche={1}>
+              <Box
+                couleur="white"
+                texte="Ancrage local"
+                padding="0"
+                complementStyle={{
+                  "text-align": "left"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Engagement visible"
+                padding="0"
+                complementStyle={{
+                  "white-space": "pre"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Renforcement des liens avec ses clients, patients et salariés"
+                padding="0"
+                complementStyle={{
+                  "text-align": "left"
+                }}
+              />
+            </Box>
           </Box>
 
           <Box
@@ -480,6 +555,7 @@ const Home = props => (
             />
             <Box
               texte="citoyen et citoyenne"
+              largeurMax={1}
               couleur="#0f5d7b"
               padding="5"
               largeur={160}
@@ -487,11 +563,62 @@ const Home = props => (
                 "text-transform": "uppercase"
               }}
             />
+            <Box
+              image="Flèche_asso_citoyen.png"
+              imageEntiere={1}
+              padding={80}
+              complementStyle={{
+                position: "relative",
+                right: "-60px"
+              }}
+            />
+            <Box margeDroite="60" padding="5" droite={1}>
+              <Box
+                couleur="white"
+                texte="Simple"
+                padding="0"
+                complementStyle={{
+                  "white-space": "pre"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Ludique"
+                padding="0"
+                complementStyle={{
+                  "white-space": "pre"
+                }}
+              />
+              <Box
+                couleur="white"
+                texte="Sans engagement"
+                padding="0"
+                complementStyle={{
+                  "text-align": "right",
+                  "white-space": "pre"
+                }}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
+      <Box margeHaut={10} texte='La borne et moi' couleur='#0f5d7b' couleurFond={green} type='bouton-maj' bordureArrondi={5} padding='15px 20'/>
     </Box>
-  </div>
+    <Box padding={80} largeurMax={1} couleur='#0f5d7b' texte="La borne LOKALÉRO est en cours de développement et n'est pas encore commercialisée" complementStyle={{
+      'font-size': '30px'
+    }}/>
+    <Box couleur={orange} texte='ILS NOUS SOUTIENNENT' padding='0' margeBas={20} complementStyle={{
+      'font-size': '30px'
+    }}>  
+    </Box>
+    <Box enLigne={1} hauteur={100} largeurMax={1} margeBas={20}> 
+        <Box image='FIPA.png' padding={50} imageEntiere={1} largeurMax={1}/>
+        <Box image='Blue_factory.png' padding={50} imageEntiere={1} largeurMax={1}/>
+        <Box image='fondation_coeurs_et_artères.png' padding={50} imageEntiere={1} largeurMax={1}/>
+        <Box image='Prix_Airfrance.png' padding={50} imageEntiere={1} largeurMax={1}/> 
+    </Box>
+
+  </div>  
 );
 
 const mapStateToProps = state => ({

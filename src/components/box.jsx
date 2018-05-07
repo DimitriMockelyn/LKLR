@@ -58,8 +58,10 @@ class Box extends React.Component {
     }
     const attrVer = this.props.enLigne ? 'align-items' : 'justify-content';
     const attrHor = this.props.enLigne ? 'justify-content' : 'align-items';
-    style[attrHor] = 'center';
-    style[attrVer] = 'center';
+    if (!this.props.texte) {
+      style[attrHor] = 'center';
+      style[attrVer] = 'center';
+    }
     style['text-align'] = 'center';
     if (this.props.gauche) {
       style[attrHor] = 'flex-start';

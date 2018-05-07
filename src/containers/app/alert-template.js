@@ -14,7 +14,8 @@ const alertStyle = {
   alignItems: "center",
   boxShadow: "0px 2px 2px 2px rgba(0, 0, 0, 0.03)",
   fontFamily: "Arial",
-  boxSizing: "border-box"
+  boxSizing: "border-box",
+  width: '50vw'
 };
 
 const buttonStyle = {
