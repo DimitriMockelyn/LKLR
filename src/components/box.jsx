@@ -21,6 +21,9 @@ class Box extends React.Component {
     if (this.props.enLigne) {
       style['flex-direction'] = 'row';
     }
+    if (this.props.aLaLigne) {
+      style['flex-wrap'] = 'wrap';
+    }
     if (this.props.image) {
       style['background-image'] = 'url(\'images/'+this.props.image+'\')'
       //style['background-size'] = 'auto';
@@ -77,6 +80,9 @@ class Box extends React.Component {
     } else {
       style['height'] = 'auto';
     }
+    if (this.props.margeAuto) {
+      style['margin'] = 'auto';
+    }
     if (this.props.marge) {
       style['margin'] = this.props.marge + 'px';
     }
@@ -85,6 +91,12 @@ class Box extends React.Component {
     }
     if (this.props.margeDroite) {
       style['margin-right'] = this.props.margeDroite + 'px';
+    }
+    if (this.props.margeHaut) {
+      style['margin-top'] = this.props.margeHaut + 'px';
+    }
+    if (this.props.margeBas) {
+      style['margin-bottom'] = this.props.margeBas + 'px';
     }
     if (this.props.type) {
       if (this.props.type ==='bouton-maj'){
@@ -117,7 +129,7 @@ class Box extends React.Component {
           handler = this.props.action;
           if (!handler) {
               handler = () => {
-                this.props.alert.show(<div style={{ 'text-transform': 'initial', 'width': '100%' }}>Le site est en cours de développement, et cette fonctionnalité n\'est pas encore disponible :( Vous pouvez nous laissez vos coordonnées pour etre tenu au courant des évolutions, dans la rubrique "Nous contacter"</div>)
+                this.props.alert.show(<div style={{ 'text-transform': 'initial', 'width': '100%' }}>Le site est en cours de développement, et cette fonctionnalité n'est pas encore disponible :( Vous pouvez nous laissez vos coordonnées pour etre tenu au courant des évolutions, dans la rubrique "Nous contacter"</div>)
               }
           }
       }
