@@ -18,7 +18,7 @@ const App = () => (
     <Header />
     <main style={{ "margin-top": "75px" }}>
       <Route exact path="/" component={Home} />
-      <Route exact path="/about-us" component={About} />
+      <Route exact path="/about" component={About} />
       <Footer />
     </main>
   </Provider>
